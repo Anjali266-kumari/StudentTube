@@ -3,7 +3,6 @@ export const popularTopics = [
   "Engineering Maths",
   "Physics",
   "Chemistry",
-  "Communication Skills",
   "Engineering Mechanics",
   "Engineering Drawing",
   "Basic Electrical Engineering",
@@ -15,14 +14,13 @@ const channelsData = {
       id: 1,
       name: "Jenny's Lectures CS IT",
       handle: "@JennyslecturesCSIT",
+      thumbnail: "https://img.youtube.com/vi/ZzaPdXTrSb8/maxresdefault.jpg",
       subscribers: "1.7M",
       videos: "600+",
       description:
         "Best Hindi C programming channel — concepts explained step by step.",
       tags: ["C Language", "Hindi", "Beginner Friendly"],
       url: "https://www.youtube.com/@JennyslecturesCSIT",
-      topPick: true,
-      emoji: "💻",
     },
     {
       id: 2,
