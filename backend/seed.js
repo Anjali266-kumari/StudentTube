@@ -552,11 +552,11 @@ async function seedDB() {
     await Channel.deleteMany();
 
     const inserted = await Channel.insertMany(data);
-    console.log(`✅ Seeded ${inserted.length} channel(s) successfully!`);
+    console.log(`Seeded ${inserted.length} channel(s) successfully!`);
 
     process.exit();
   } catch (error) {
-    console.error("❌ Seeding Error:", error);
+    console.error("Seeding Error:", error);
     process.exit(1);
   }
 }

@@ -10,18 +10,16 @@ router.get("/", async (req, res) => {
     let query = {};
 
     if (subject) {
-      // Expand the search term into related synonyms (e.g. "mathematics" -> ["mathematics", "maths", "math"])
       const terms = expandSynonyms(subject);
 
-      // Match if subject field contains ANY of these terms (case-insensitive)
       query.subject = {
-        $regex: terms.join("|"), // turns into a regex like: maths|math|mathematics
+        $regex: terms.join("|"),
         $options: "i",
       };
     }
 
     if (semester) {
-      query.semester = semester; // exact match, e.g. "1", "2"
+      query.semester = semester;
     }
 
     const channels = await Channel.find(query);
@@ -32,7 +30,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-//Add channel
 router.post("/", async (req, res) => {
   try {
     const channel = await Channel.create(req.body);

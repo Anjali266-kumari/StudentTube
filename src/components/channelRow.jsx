@@ -39,12 +39,10 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
           : "border-slate-800/70"
       }`}
     >
-      {/* Top Pick Glow Line */}
       {topPick && (
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-80 z-10"></div>
       )}
 
-      {/* Thumbnail */}
       <div className="relative w-full aspect-video overflow-hidden bg-slate-900">
         {channel.thumbnail && !imgError ? (
           <img
@@ -54,20 +52,33 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
-          /* Stylish fallback thumbnail */
-          <div className={`w-full h-full flex flex-col items-center justify-center bg-gradient-to-br ${gradient.from} ${gradient.to} relative`}>
-            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, white 1px, transparent 1px), radial-gradient(circle at 70% 20%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }}></div>
+          <div
+            className={`w-full h-full flex flex-col items-center justify-center bg-gradient-to-br ${gradient.from} ${gradient.to} relative`}
+          >
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 30% 50%, white 1px, transparent 1px), radial-gradient(circle at 70% 20%, white 1px, transparent 1px)",
+                backgroundSize: "40px 40px",
+              }}
+            ></div>
             <span className="text-4xl mb-2 relative z-10">{emoji || "🎓"}</span>
-            <span className="text-white font-bold text-lg relative z-10">{getInitials(name)}</span>
+            <span className="text-white font-bold text-lg relative z-10">
+              {getInitials(name)}
+            </span>
             <div className="absolute bottom-3 right-3">
-              <svg className="w-7 h-7 text-white/30" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-7 h-7 text-white/30"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </div>
           </div>
         )}
 
-        {/* Top Pick Badge */}
         {topPick && (
           <span className="absolute top-3 left-3 text-[10px] font-bold tracking-wider text-indigo-200 bg-slate-950/85 border border-indigo-500/30 px-2 py-0.5 rounded-md uppercase flex items-center gap-1 backdrop-blur-sm z-10">
             <span className="w-1 h-1 rounded-full bg-indigo-400 animate-ping"></span>
@@ -75,7 +86,6 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
           </span>
         )}
 
-        {/* Favorite Star */}
         <button
           onClick={() => onToggleFavorite(channel)}
           className={`absolute top-3 right-3 p-2 rounded-xl border backdrop-blur-sm transition-all duration-200 cursor-pointer z-10 ${
@@ -101,7 +111,6 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
         </button>
       </div>
 
-      {/* Content */}
       <div className="flex-1 flex flex-col p-5">
         <div className="flex items-start justify-between gap-2 mb-1.5">
           <div className="min-w-0">
@@ -109,23 +118,44 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
               {name}
             </h3>
             {handle && (
-              <span className="text-xs text-slate-500 font-medium">{handle}</span>
+              <span className="text-xs text-slate-500 font-medium">
+                {handle}
+              </span>
             )}
           </div>
         </div>
 
-        {/* Stats */}
         <div className="flex items-center gap-4 text-xs text-slate-500 font-medium mb-3">
           <span className="flex items-center gap-1.5">
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              />
             </svg>
             <span className="text-slate-400">{subscribers}</span>
           </span>
           {videos && (
             <span className="flex items-center gap-1.5">
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                />
               </svg>
               <span className="text-slate-400">{videos} videos</span>
             </span>
@@ -136,7 +166,6 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
           {description}
         </p>
 
-        {/* Tags */}
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-4">
             {tags.map((tag) => (
@@ -150,7 +179,6 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
           </div>
         )}
 
-        {/* Visit Channel CTA */}
         <a
           href={url}
           target="_blank"
@@ -165,7 +193,11 @@ const ChannelRow = ({ channel, index, isFavorite, onToggleFavorite }) => {
             strokeWidth={2.5}
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
           </svg>
         </a>
       </div>

@@ -5,15 +5,15 @@ import Hero from "./components/Hero";
 import Results from "./components/Results";
 import AIAssistant from "./components/AIAssistant";
 import NotesPage from "./components/NotesPage";
-import { getChannels } from "./api"; // ✅ backend API call (replaces static data import)
+import { getChannels } from "./api";
 
 function App() {
   const [activeTab, setActiveTab] = useState("home");
   const [query, setQuery] = useState("");
   const [channels, setChannels] = useState(null);
-  const [loading, setLoading] = useState(false); // ✅ loading state for search
-  const [error, setError] = useState(null); // ✅ error state if backend call fails
-  const [selectedSemester, setSelectedSemester] = useState(""); // ✅ "" = all semesters
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [selectedSemester, setSelectedSemester] = useState("");
 
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem("studenttube_favorites");
@@ -27,7 +27,6 @@ function App() {
     return [];
   });
 
-  // ✅ Now async — fetches from MongoDB via backend instead of local file
   const handleSearch = async (subject) => {
     setActiveTab("home");
     setQuery(subject);
@@ -54,7 +53,6 @@ function App() {
     }, 50);
   };
 
-  // ✅ Using _id (MongoDB's id field) instead of id
   const toggleFavorite = (channel) => {
     const isFav = favorites.some((fav) => fav._id === channel._id);
     let updated;
@@ -73,21 +71,17 @@ function App() {
     setError(null);
   };
 
-  // ✅ Re-fetch results if the user changes semester while a search is active
   useEffect(() => {
     if (query) {
       handleSearch(query);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedSemester]);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 relative overflow-hidden flex flex-col">
-      {/* Ambient background glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-indigo-500/5 blur-[120px] animate-glow-slow pointer-events-none"></div>
       <div className="absolute bottom-[20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-violet-600/5 blur-[140px] animate-glow-medium pointer-events-none"></div>
 
-      {/* Grid Pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35 pointer-events-none"></div>
 
       <Navbar
@@ -100,33 +94,45 @@ function App() {
       />
 
       <main className="flex-grow relative z-10 pt-6">
-        {/* HOME */}
         {activeTab === "home" && (
           <>
             <Hero onSearch={handleSearch} />
 
             <div id="results">
-              {/* ✅ Loading state */}
               {loading && (
                 <div className="max-w-4xl mx-auto px-6 py-16 text-center">
                   <div className="inline-flex flex-col items-center gap-4">
                     <div className="relative w-12 h-12">
                       <div className="absolute inset-0 rounded-full border-2 border-slate-800"></div>
                       <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-indigo-500 animate-spin"></div>
-                      <div className="absolute inset-2 rounded-full border border-transparent border-t-violet-400 animate-spin" style={{ animationDuration: '0.6s', animationDirection: 'reverse' }}></div>
+                      <div
+                        className="absolute inset-2 rounded-full border border-transparent border-t-violet-400 animate-spin"
+                        style={{
+                          animationDuration: "0.6s",
+                          animationDirection: "reverse",
+                        }}
+                      ></div>
                     </div>
-                    <p className="text-slate-400 text-sm font-medium">Finding top educators<span className="animate-pulse">...</span></p>
+                    <p className="text-slate-400 text-sm font-medium">
+                      Finding top educators
+                      <span className="animate-pulse">...</span>
+                    </p>
                   </div>
                 </div>
               )}
 
-              {/* ✅ Error state */}
               {!loading && error && (
                 <div className="max-w-4xl mx-auto px-6 py-10">
                   <div className="glass-panel border border-red-500/20 rounded-2xl p-8 text-center">
-                    <div className="w-12 h-12 rounded-full bg-red-950/40 border border-red-500/20 flex items-center justify-center mx-auto mb-4 text-xl">⚠️</div>
-                    <h3 className="text-sm font-bold text-white mb-1">Connection Error</h3>
-                    <p className="text-xs text-red-400/80 max-w-sm mx-auto">{error}</p>
+                    <div className="w-12 h-12 rounded-full bg-red-950/40 border border-red-500/20 flex items-center justify-center mx-auto mb-4 text-xl">
+                      ⚠️
+                    </div>
+                    <h3 className="text-sm font-bold text-white mb-1">
+                      Connection Error
+                    </h3>
+                    <p className="text-xs text-red-400/80 max-w-sm mx-auto">
+                      {error}
+                    </p>
                   </div>
                 </div>
               )}
@@ -145,14 +151,12 @@ function App() {
           </>
         )}
 
-        {/* NOTES */}
         {activeTab === "notes" && (
           <div className="py-6">
             <NotesPage />
           </div>
         )}
 
-        {/* FAVORITES */}
         {activeTab === "favorites" && (
           <div className="max-w-5xl mx-auto px-6 py-10">
             <header className="mb-8 text-center">
@@ -178,7 +182,6 @@ function App() {
           </div>
         )}
 
-        {/* AI ASSISTANT */}
         {activeTab === "ai-assistant" && (
           <div className="py-6">
             <div className="max-w-3xl mx-auto px-6 text-center mb-8">

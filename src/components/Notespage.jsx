@@ -82,7 +82,6 @@ const NotesPage = () => {
         </div>
       </div>
 
-      {/* Subject Filter Pills */}
       <div className="flex gap-2 flex-wrap mb-6 justify-center">
         {subjects.map((s) => (
           <button
@@ -100,7 +99,6 @@ const NotesPage = () => {
         ))}
       </div>
 
-      {/* Search bar */}
       <div className="mb-8">
         <div className="relative">
           <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500">
@@ -128,7 +126,6 @@ const NotesPage = () => {
         </div>
       </div>
 
-      {/* Notes List */}
       {loading ? (
         <div className="text-center py-16 text-slate-500 text-sm">
           Loading notes...
@@ -153,11 +150,10 @@ const NotesPage = () => {
               className="glass-panel glass-panel-hover flex items-center gap-4 border border-slate-800/80 rounded-xl px-4 py-3.5 group"
               style={{ animationDelay: `${idx * 30}ms` }}
             >
-              {/* Icon */}
               <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 text-lg border bg-indigo-950/40 border-indigo-500/20">
                 📄
               </div>
-              {/* Info */}
+
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold text-white truncate mb-0.5">
                   {note.title}
@@ -178,7 +174,6 @@ const NotesPage = () => {
                   </span>
                 </p>
               </div>
-              {/* Open Button */}
 
               <a
                 href={`${API_BASE}${note.pdfUrl}`}
@@ -210,7 +205,6 @@ const NotesPage = () => {
         </div>
       )}
 
-      {/* Result count */}
       {filtered.length > 0 && (
         <p className="text-xs text-slate-600 mt-5 text-center font-medium">
           Showing <span className="text-slate-400">{filtered.length}</span> note

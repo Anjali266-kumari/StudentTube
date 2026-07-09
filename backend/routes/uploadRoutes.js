@@ -14,7 +14,6 @@ const storage = multer.diskStorage({
   },
 });
 
-// only allow pdfs
 const upload = multer({
   storage,
   fileFilter: (req, file, cb) => {
@@ -26,7 +25,6 @@ const upload = multer({
   },
 });
 
-// POST /api/upload - upload a pdf and save note metadata
 router.post("/", upload.single("pdf"), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ message: "No files received" });
@@ -53,8 +51,6 @@ router.post("/", upload.single("pdf"), async (req, res) => {
     res.status(500).json({ message: "Error saving note to database", error });
   }
 });
-
-// GET /api/upload - list all uploaded files (kept from your original, still useful for debugging)
 router.get("/", (req, res) => {
   import("fs").then((fs) => {
     fs.readdir("uploads/", (err, files) => {

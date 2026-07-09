@@ -9,12 +9,23 @@ const Navbar = ({
   const navItems = [
     { id: "home", label: "Home", icon: null },
     { id: "notes", label: "Notes", icon: null },
-    { id: "favorites", label: "Favorites", badge: favoriteCount > 0 ? favoriteCount : null },
+    {
+      id: "favorites",
+      label: "Favorites",
+      badge: favoriteCount > 0 ? favoriteCount : null,
+    },
     { id: "ai-assistant", label: "AI Guide", pulse: true },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-800/60" style={{ background: "rgba(7,10,19,0.85)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }}>
+    <nav
+      className="sticky top-0 z-50 border-b border-slate-800/60"
+      style={{
+        background: "rgba(7,10,19,0.85)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
+      }}
+    >
       <div className="flex items-center justify-between max-w-5xl mx-auto px-4 sm:px-6 py-3 gap-3">
         {/* Logo */}
         <button
@@ -25,7 +36,11 @@ const Navbar = ({
           className="flex items-center gap-2.5 group cursor-pointer text-left flex-shrink-0"
         >
           <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:scale-105 group-hover:shadow-indigo-500/40 transition-all duration-300">
-            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
             </svg>
           </div>
@@ -39,7 +54,6 @@ const Navbar = ({
           </div>
         </button>
 
-        {/* Navigation Tabs */}
         <div className="flex items-center gap-0.5 sm:gap-1 text-sm flex-shrink-0 bg-slate-900/50 border border-slate-800/80 rounded-xl p-1">
           {navItems.map((item) => (
             <button
@@ -56,7 +70,9 @@ const Navbar = ({
             >
               {item.label}
               {item.badge != null && (
-                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center ${activeTab === item.id ? "bg-white/20 text-white" : "bg-indigo-600/80 text-white"}`}>
+                <span
+                  className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center ${activeTab === item.id ? "bg-white/20 text-white" : "bg-indigo-600/80 text-white"}`}
+                >
                   {item.badge}
                 </span>
               )}
@@ -70,7 +86,6 @@ const Navbar = ({
           ))}
         </div>
 
-        {/* Semester Selector */}
         <div className="flex-shrink-0">
           <select
             value={selectedSemester}

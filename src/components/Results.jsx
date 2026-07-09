@@ -12,7 +12,6 @@ const Results = ({
 
   return (
     <div className="max-w-6xl mx-auto px-6 pb-20 relative z-10">
-      {/* Search Result Header */}
       {!isFavoritesTab && (
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
@@ -49,7 +48,6 @@ const Results = ({
         </div>
       )}
 
-      {/* Channels Grid */}
       {channels && channels.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {channels.map((channel, i) => {
