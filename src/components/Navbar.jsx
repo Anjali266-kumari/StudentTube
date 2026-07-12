@@ -14,7 +14,7 @@ const Navbar = ({
       label: "Favorites",
       badge: favoriteCount > 0 ? favoriteCount : null,
     },
-    { id: "ai-assistant", label: "AI Guide", pulse: true },
+    // { id: "ai-assistant", label: "AI Guide", pulse: true },
   ];
 
   return (

@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
 import Results from "./components/Results";
-import AIAssistant from "./components/AIAssistant";
+// import AIAssistant from "./components/AIAssistant"; // TODO: re-enable AI Guide later
 import NotesPage from "./components/NotesPage";
 import { getChannels } from "./api";
 
@@ -182,6 +182,7 @@ function App() {
           </div>
         )}
 
+        {/* AI Guide tab temporarily disabled — re-enable by uncommenting below and the import above
         {activeTab === "ai-assistant" && (
           <div className="py-6">
             <div className="max-w-3xl mx-auto px-6 text-center mb-8">
@@ -200,6 +201,7 @@ function App() {
             <AIAssistant />
           </div>
         )}
+        */}
       </main>
     </div>
   );
