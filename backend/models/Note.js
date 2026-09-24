@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { BiTrim } from "react-icons/bi";
 
 const noteSchema = new mongoose.Schema(
   {
