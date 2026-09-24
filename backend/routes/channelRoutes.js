@@ -1,6 +1,6 @@
 import express from "express";
 import Channel from "../models/channel.js";
-import { expandSynonyms } from "../synonyms.js";
+import { expandSynonyms } from "../Synonyms.js";
 
 const router = express.Router();
 
