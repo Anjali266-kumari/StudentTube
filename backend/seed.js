@@ -5,6 +5,8 @@ import Channel from "./models/Channel.js";
 dotenv.config();
 
 const data = [
+  // ==================== 1st SEMESTER ====================
+
   {
     subject: "Engineering Maths",
     semester: "1",
@@ -34,15 +36,14 @@ const data = [
   },
 
   {
-    subject: "Programming for Problem Solving",
+    subject: "C Programming",
     semester: "1",
     name: "Jenny's Lectures CS IT",
     handle: "@JennyslecturesCSIT",
     thumbnail: "https://i.ytimg.com/vi/EjavYOFoJJ0/mqdefault.jpg",
     subscribers: "2.08M",
     videos: "",
-    description:
-      "C_01 Introduction to C Language | Complete C Programming tutorials for first year engineering students.",
+    description: "C Programming tutorials for first year engineering students.",
     url: "https://www.youtube.com/playlist?list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S",
     tags: ["First Year", "C Programming", "English"],
   },
@@ -70,7 +71,7 @@ const data = [
     subscribers: "232K",
     videos: "",
     description:
-      "Electronic Materials (Atom and its Structure) | Physics for BE/BTech 1st year engineering, all universities.",
+      "Electronic Materials (Atom and its Structure) | Physics for BE/BTech 1st year engineering.",
     url: "https://www.youtube.com/playlist?list=PL3qvHcrYGy1u112gfsHycdWaLTVRt8ame",
     tags: ["First Year", "Numericals", "Hindi"],
   },
@@ -97,12 +98,12 @@ const data = [
     subscribers: "21.5K",
     videos: "",
     description:
-      "Cell as Basic Unit of Life | Cell Theory, Cell Shapes, Cell Structure, Cell Cycle - Unit 1 Basic Biology.",
+      "Cell as Basic Unit of Life | Cell Theory, Cell Shapes, Cell Structure, Cell Cycle.",
     url: "https://www.youtube.com/playlist?list=PLmcndht8X48xxRzmEr330TBmQRWCk-57I",
     tags: ["First Year", "Biology"],
   },
 
-  // ===== 2nd Semester =====
+  // ==================== 2nd SEMESTER ====================
 
   {
     subject: "Engineering Maths",
@@ -113,7 +114,7 @@ const data = [
     subscribers: "995K",
     videos: "",
     description:
-      "What is Differential Equation? Why we study Differential Equation in BTech & BSc? (Lecture-1)",
+      "What is Differential Equation? Why we study Differential Equation in BTech & BSc?",
     url: "https://www.youtube.com/watch?v=eJaoJ4pA8RE&list=PLdM-WZokR4tZSBbc5JJGkZYxhbWrm9OqY",
     tags: ["Second Semester", "Differential Equations", "Hindi"],
   },
@@ -141,7 +142,7 @@ const data = [
     subscribers: "717K",
     videos: "",
     description:
-      "Differential Equation of First Order and First Degree | Lecture 1 | Mathematics | Engineering.",
+      "Differential Equation of First Order and First Degree | Engineering Mathematics.",
     url: "https://www.youtube.com/watch?v=TH4Kd9mfIgI&list=PLT3bOBUU3L9g0aergP43HK9ihc_UG7Kbx",
     tags: ["Second Semester", "Differential Equations", "Hindi"],
   },
@@ -155,7 +156,7 @@ const data = [
     subscribers: "419K",
     videos: "",
     description:
-      "Introduction to Differential Equations | Order and Degree | BBA, BCA, B.COM, B.TECH.",
+      "Introduction to Differential Equations | BBA, BCA, B.COM, B.TECH.",
     url: "https://www.youtube.com/watch?v=14qwp08k0ng&list=PLEHGYFbPuuMFt8aEwrYIWOQh-b6Qvn5N6",
     tags: ["Second Semester", "Differential Equations", "Hindi"],
   },
@@ -182,7 +183,7 @@ const data = [
     subscribers: "995K",
     videos: "",
     description:
-      "Partial Differential Equation 2.0 - Concept, order, degree of PDE & why we study it.",
+      "Partial Differential Equation 2.0 - Concept, order, degree of PDE.",
     url: "https://www.youtube.com/watch?v=ohYA_zegWjU&list=PLdM-WZokR4tYFgr-wbDT643Hy2M_n2P3w",
     tags: ["Second Semester", "PDE", "Hindi"],
   },
@@ -195,8 +196,7 @@ const data = [
     thumbnail: "https://i.ytimg.com/vi/Cqsmb5eVzQk/hqdefault.jpg",
     subscribers: "995K",
     videos: "",
-    description:
-      "Probability - Random Experiment & Sample Space in Hindi (Lecture-1).",
+    description: "Probability - Random Experiment & Sample Space in Hindi.",
     url: "https://www.youtube.com/watch?v=Cqsmb5eVzQk&list=PLWpLtDYKhjfoDrzfLHxQCbOxyrxPEW1ZP",
     tags: ["Second Semester", "Probability", "Hindi"],
   },
@@ -210,7 +210,7 @@ const data = [
     subscribers: "717K",
     videos: "",
     description:
-      "PROBABILITY | Law of Probability and Conditional Probability | Lecture 01 | All University.",
+      "Probability | Law of Probability and Conditional Probability.",
     url: "https://www.youtube.com/watch?v=d3I_uKmBT4E&list=PLT3bOBUU3L9jex8hXzVAszMS8NOILa7IV&index=4",
     tags: ["Second Semester", "Probability", "Hindi"],
   },
@@ -236,8 +236,7 @@ const data = [
     thumbnail: "https://i.ytimg.com/vi/icrAf1us2IQ/hqdefault.jpg",
     subscribers: "232K",
     videos: "",
-    description:
-      "Forward Bias (P N Junction Diode) Diode theory & applications (Basic Electronics).",
+    description: "Forward Bias (P N Junction Diode) theory & applications.",
     url: "https://www.youtube.com/watch?v=icrAf1us2IQ&list=PL3qvHcrYGy1uF5KAGntUITTJ85Dm3Dtdy",
     tags: ["Second Semester", "Electronics", "Hindi"],
   },
@@ -264,7 +263,7 @@ const data = [
     subscribers: "493K",
     videos: "",
     description:
-      "Orthographic Projection - An Introduction | Engineering Drawing | Engineering Graphics.",
+      "Orthographic Projection - An Introduction | Engineering Graphics.",
     url: "https://www.youtube.com/watch?v=WG6H2pISUzQ&list=PLIhUrsYr8yHwDUrVYmUNYkEeZgZTvoIfS",
     tags: ["Second Semester", "Engineering Drawing", "English"],
   },
@@ -292,7 +291,7 @@ const data = [
     subscribers: "717K",
     videos: "",
     description:
-      "System of Forces | Resolution of Forces | Lecture 01 | Engineering Mechanics.",
+      "System of Forces | Resolution of Forces | Engineering Mechanics.",
     url: "https://www.youtube.com/watch?v=OvbSR3w61lQ&list=PLT3bOBUU3L9hADhGPsZjSddwAC3BvJDnl",
     tags: ["Second Semester", "Engineering Mechanics", "Hindi"],
   },
@@ -306,12 +305,12 @@ const data = [
     subscribers: "953K",
     videos: "",
     description:
-      "Complete Study of Free Body Diagram in Engineering Mechanics and Applied Mechanics.",
+      "Complete Study of Free Body Diagram in Engineering Mechanics.",
     url: "https://www.youtube.com/watch?v=Vb1aMHC1_BM&list=PLDN15nk5uLiAyM7MbRBF1eIFC8y5vMRxI",
     tags: ["Second Semester", "Engineering Mechanics", "Hindi"],
   },
 
-  // ===== 3rd Semester =====
+  // ==================== 3rd SEMESTER ====================
 
   {
     subject: "Engineering Mathematics",
@@ -322,7 +321,7 @@ const data = [
     subscribers: "1.82M",
     videos: "",
     description:
-      "Statistics and Probability | Overview of Random Variable & Probability Distribution.",
+      "Statistics and Probability | Random Variable & Probability Distribution.",
     url: "https://www.youtube.com/watch?v=V3iEsLPAD68&list=PLU6SqdYcYsfLRq3tu-g_hvkHDcorrtcBK",
     tags: ["Third Semester", "Probability", "Hindi"],
   },
@@ -332,12 +331,10 @@ const data = [
     semester: "3",
     name: "Dream Maths",
     handle: "@DreamMaths",
-    thumbnail:
-      "https://i.ytimg.com/vi/arHKUMbsh9k/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAYKNTAAW0lXVbHFKkxiNi4fwZM5w",
+    thumbnail: "https://i.ytimg.com/vi/arHKUMbsh9k/hq720.jpg",
     subscribers: "418K",
     videos: "",
-    description:
-      "Introduction to Hypothesis Testing | Statistics | BBA, BCA, B.Com, B.Tech.",
+    description: "Introduction to Hypothesis Testing | Statistics | B.Tech.",
     url: "https://www.youtube.com/watch?v=arHKUMbsh9k&list=PLEHGYFbPuuMEyKDmzvYvoMzSxUJnwx-JT",
     tags: ["Third Semester", "Statistics", "Hindi"],
   },
@@ -350,8 +347,7 @@ const data = [
     thumbnail: "https://i.ytimg.com/vi/d9hpfrrZXac/mqdefault.jpg",
     subscribers: "1.82M",
     videos: "",
-    description:
-      "Queueing Theory | Overview and Introduction of Models in Queueing Theory by GP Sir.",
+    description: "Queueing Theory | Overview and Introduction of Models.",
     url: "https://www.youtube.com/watch?v=d9hpfrrZXac&list=PLU6SqdYcYsfJxRfVS-vKgVa-Oz-THIJNk",
     tags: ["Third Semester", "Queuing Theory", "Hindi"],
   },
@@ -364,8 +360,7 @@ const data = [
     thumbnail: "https://i.ytimg.com/vi/rZ41y93P2Qo/mqdefault.jpg",
     subscribers: "897K",
     videos: "",
-    description:
-      "Best Data Structures & Algorithms (DSA) Course - Clear Any FAANG Interview!",
+    description: "Best Data Structures & Algorithms (DSA) Course.",
     url: "https://www.youtube.com/watch?v=rZ41y93P2Qo&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ",
     tags: ["Third Semester", "DSA", "Java", "English"],
   },
@@ -378,8 +373,7 @@ const data = [
     thumbnail: "https://i.ytimg.com/vi/yRpLlJmRo2w/mqdefault.jpg",
     subscribers: "7.68M",
     videos: "",
-    description:
-      "Introduction to Java Language | Lecture 1 | Complete Placement Course.",
+    description: "Introduction to Java Language | Complete Placement Course.",
     url: "https://www.youtube.com/watch?v=yRpLlJmRo2w&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop",
     tags: ["Third Semester", "DSA", "Java", "Hindi"],
   },
@@ -393,7 +387,7 @@ const data = [
     subscribers: "2.08M",
     videos: "",
     description:
-      "1.1 Arrays in Data Structure | Declaration, Initialization, Memory representation.",
+      "Arrays in Data Structure | Declaration, Initialization, Memory representation.",
     url: "https://www.youtube.com/watch?v=AT14lCXuMKI&list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU",
     tags: ["Third Semester", "DSA", "C", "Hindi"],
   },
@@ -416,12 +410,10 @@ const data = [
     semester: "3",
     name: "Apna College",
     handle: "@ApnaCollegeOfficial",
-    thumbnail:
-      "https://i.ytimg.com/vi/VTLCoHnyACE/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLANRgL8BByNSNvuNhHjMmJmfD3GBQ",
+    thumbnail: "https://i.ytimg.com/vi/VTLCoHnyACE/hqdefault.jpg",
     subscribers: "7.68M",
     videos: "",
-    description:
-      "Lecture 1: Flowchart & Pseudocode + Installation | DSA Series by Shradha Khapra Ma'am | C++.",
+    description: "Flowchart & Pseudocode + Installation | DSA Series | C++.",
     url: "https://www.youtube.com/watch?v=VTLCoHnyACE&list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt",
     tags: ["Third Semester", "DSA", "C++", "Hindi"],
   },
@@ -431,8 +423,7 @@ const data = [
     semester: "3",
     name: "Engineering Funda",
     handle: "@EngineeringFunda",
-    thumbnail:
-      "https://i.ytimg.com/vi/1BkWqhkqUR4/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAs0QFGiPvtRvAzM7ND_XLA2jIvug",
+    thumbnail: "https://i.ytimg.com/vi/1BkWqhkqUR4/hqdefault.jpg",
     subscribers: "641K",
     videos: "",
     description: "Digital Electronics by Engineering Funda.",
@@ -445,12 +436,11 @@ const data = [
     semester: "3",
     name: "Gate Smashers",
     handle: "@GateSmashers",
-    thumbnail:
-      "https://i.ytimg.com/vi/O0gtKDu_cJc/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAY35PW-wK3w21CLSPgdN9RAKPpSQ",
+    thumbnail: "https://i.ytimg.com/vi/O0gtKDu_cJc/hqdefault.jpg",
     subscribers: "2.75M",
     videos: "",
     description:
-      "Lec-1: Digital Logic Syllabus for GATE, UGCNET etc. | Full Playlist for College/University Students.",
+      "Digital Logic syllabus and full playlist for college/university students.",
     url: "https://www.youtube.com/watch?v=O0gtKDu_cJc&list=PLxCzCOWd7aiGmXg4NoX6R31AsC5LeCPHe",
     tags: ["Third Semester", "Digital Electronics", "Hindi"],
   },
@@ -460,11 +450,10 @@ const data = [
     semester: "3",
     name: "Neso Academy",
     handle: "@nesoacademy",
-    thumbnail:
-      "https://i.ytimg.com/vi/M0mx8S05v60/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAoWgATsGhxxcg72kJ65e70J7RFRg",
+    thumbnail: "https://i.ytimg.com/vi/M0mx8S05v60/hqdefault.jpg",
     subscribers: "3.2M",
     videos: "",
-    description: "What is Signal?",
+    description: "Digital Electronics and Signals.",
     url: "https://www.youtube.com/watch?v=M0mx8S05v60&list=PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm",
     tags: ["Third Semester", "Digital Electronics", "English"],
   },
@@ -474,12 +463,11 @@ const data = [
     semester: "3",
     name: "Kunal Kushwaha",
     handle: "@kunalkushwaha",
-    thumbnail:
-      "https://i.ytimg.com/vi/BSVKUk58K6U/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAtgfJEGoViXhZHDBYYUGrD1vuSjQ",
+    thumbnail: "https://i.ytimg.com/vi/BSVKUk58K6U/hqdefault.jpg",
     subscribers: "897K",
     videos: "",
     description:
-      "OOP 1 | Introduction & Concepts - Classes, Objects, Constructors, Keywords.",
+      "OOP Introduction & Concepts - Classes, Objects, Constructors, Keywords.",
     url: "https://www.youtube.com/watch?v=BSVKUk58K6U&list=PL9gnSGHSqcno1G3XjUbwzXHL8_EttOuKk",
     tags: ["Third Semester", "OOP", "Java", "English"],
   },
@@ -493,7 +481,7 @@ const data = [
     subscribers: "7.68M",
     videos: "",
     description:
-      "Java OOPs in One Shot | Object Oriented Programming | Java Language | Placement Course.",
+      "Java OOPs in One Shot | Object Oriented Programming | Java Language.",
     url: "https://www.youtube.com/watch?v=bSrm9RXwBaI",
     tags: ["Third Semester", "OOP", "Java", "Hindi"],
   },
@@ -503,12 +491,10 @@ const data = [
     semester: "3",
     name: "Gate Smashers",
     handle: "@GateSmashers",
-    thumbnail:
-      "https://i.ytimg.com/vi/kBdlM6hNDAE/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDsIVMTcTTJfJmnAvUCFlyjT75F_Q",
+    thumbnail: "https://i.ytimg.com/vi/kBdlM6hNDAE/hqdefault.jpg",
     subscribers: "2.75M",
     videos: "",
-    description:
-      "Lec-1: DBMS Syllabus for GATE, UGCNET, NIELIT, DSSSB etc. | Full DBMS for College/University Students.",
+    description: "DBMS for GATE, UGCNET and College/University Students.",
     url: "https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y",
     tags: ["Third Semester", "DBMS", "Hindi"],
   },
@@ -518,11 +504,10 @@ const data = [
     semester: "3",
     name: "Jenny's Lectures CS IT",
     handle: "@JennyslecturesCSIT",
-    thumbnail:
-      "https://i.ytimg.com/vi/T7AxM7Vqvaw/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA6hh3TSB8zVy68jT3ntuFlIswdgw",
+    thumbnail: "https://i.ytimg.com/vi/T7AxM7Vqvaw/hqdefault.jpg",
     subscribers: "2.08M",
     videos: "",
-    description: "Lec 1: Introduction to DBMS | Database Management System.",
+    description: "Introduction to DBMS | Database Management System.",
     url: "https://www.youtube.com/watch?v=T7AxM7Vqvaw&list=PLdo5W4Nhv31b33kF46f9aFjoJPOkdlsRc",
     tags: ["Third Semester", "DBMS", "Hindi"],
   },
@@ -532,8 +517,7 @@ const data = [
     semester: "3",
     name: "Neso Academy",
     handle: "@nesoacademy",
-    thumbnail:
-      "https://i.ytimg.com/vi/OMwgGL3lHlI/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLD4-zzw-0UM5mmd6jEbzki65aw_0w",
+    thumbnail: "https://i.ytimg.com/vi/OMwgGL3lHlI/hqdefault.jpg",
     subscribers: "3.2M",
     videos: "",
     description: "Introduction to Database Management Systems (DBMS).",
@@ -545,18 +529,22 @@ const data = [
 async function seedDB() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
+
     console.log("MongoDB Connected ✔");
 
-    // NOTE: This clears ALL existing channels before inserting.
-    // Comment out the next line if you want to keep old data and only add new entries.
-    await Channel.deleteMany();
+    // Clear existing channels
+    await Channel.deleteMany({});
 
+    // Insert complete channel data
     const inserted = await Channel.insertMany(data);
-    console.log(`Seeded ${inserted.length} channel(s) successfully!`);
 
-    process.exit();
+    console.log(`Seeded ${inserted.length} channels successfully!`);
+
+    await mongoose.disconnect();
+    process.exit(0);
   } catch (error) {
     console.error("Seeding Error:", error);
+    await mongoose.disconnect();
     process.exit(1);
   }
 }
