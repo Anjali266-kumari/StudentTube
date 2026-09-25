@@ -3,8 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
 import Results from "./components/Results";
-// import AIAssistant from "./components/AIAssistant"; // TODO: re-enable AI Guide later
-import NotesPage from "./components/NotesPage";
+import NotesPage from "./components/Notespage.jsx";
 import { getChannels } from "./api";
 
 function App() {
@@ -181,27 +180,6 @@ function App() {
             />
           </div>
         )}
-
-        {/* AI Guide tab temporarily disabled — re-enable by uncommenting below and the import above
-        {activeTab === "ai-assistant" && (
-          <div className="py-6">
-            <div className="max-w-3xl mx-auto px-6 text-center mb-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
-                AI Powered
-              </div>
-              <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-300 mb-2">
-                StudentGuide AI Advisor
-              </h2>
-              <p className="text-slate-400 text-sm max-w-sm mx-auto leading-relaxed">
-                Ask questions or request structured study paths compiled from
-                our curated educator dataset.
-              </p>
-            </div>
-            <AIAssistant />
-          </div>
-        )}
-        */}
       </main>
     </div>
   );
