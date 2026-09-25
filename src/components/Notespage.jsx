@@ -19,7 +19,7 @@ const subjects = [
   { id: "question paper", label: "Question Paper", emoji: "📝" },
 ];
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://studenttube.onrender.com";
 
 const NotesPage = () => {
   const [notesData, setNotesData] = useState([]);

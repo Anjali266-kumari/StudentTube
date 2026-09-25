@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://studenttube.onrender.com/api",
 });
 
 export const getChannels = async (subject, semester) => {
